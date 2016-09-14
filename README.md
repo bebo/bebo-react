@@ -1,6 +1,6 @@
 # bebo-react
 
-A wrap react 
+A wrapper for the beboSDK in react 
 
 ## Get it
 
