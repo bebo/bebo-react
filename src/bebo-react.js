@@ -15,7 +15,7 @@ export function withBebo(WrappedComponent) {
       // eslint-disable-next-line
       if(Bebo) {
         // eslint-disable-next-line
-        return <WrappedComponent {...this.props} bebo={Bebo} />
+        return <WrappedComponent {...this.props} bebo={Bebo} Bebo={Bebo} />
       }
       return console.error('Bebo is not defined yet...');
 
