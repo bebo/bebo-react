@@ -37,10 +37,15 @@ export default new class BeboDOM {
 
   render(component, element, beboOptions) {
     this.bebo.onReady(() => {
-      const { disableKeyboardDoneStrip } = beboOptions;
+      const { disableKeyboardDoneStrip, disableAudio  } = beboOptions;
     if(disableKeyboardDoneStrip) {
       // eslint-disable-next-line
       Bebo.UI.disableKeyboardDoneStrip();
+    }
+      // eslint-disable-next-line
+    if(disableAudio && Bebo.Audio && Bebo.Audio.disable) {
+      // eslint-disable-next-line
+      Bebo.Audio.disable();
     }
     ReactDOM.render(component, element);
   })
